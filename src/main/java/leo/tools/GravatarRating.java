@@ -1,3 +1,5 @@
+package leo.tools;
+
 public enum GravatarRating {
 
 	GENERAL_AUDIENCES("g"),

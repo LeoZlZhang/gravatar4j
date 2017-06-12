@@ -1,12 +1,11 @@
+package leo.tools;
+
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.Validate;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
@@ -17,15 +16,15 @@ import java.util.List;
  * gravatar.com server. This class calculates the gravatar url and fetches
  * gravatar images. See http://en.gravatar.com/site/implement/url .
  * <p>
- * This class is thread-safe, Gravatar objects can be shared.
+ * This class is thread-safe, leo.tools.Gravatar objects can be shared.
  * <p>
  * Usage example:
  * <p>
  * <code>
- * Gravatar gravatar = new Gravatar();
+ * leo.tools.Gravatar gravatar = new leo.tools.Gravatar();
  * gravatar.setSize(50);
- * gravatar.setRating(GravatarRating.GENERAL_AUDIENCES);
- * gravatar.setDefaultImage(GravatarDefaultImage.IDENTICON);
+ * gravatar.setRating(leo.tools.GravatarRating.GENERAL_AUDIENCES);
+ * gravatar.setDefaultImage(leo.tools.GravatarDefaultImage.IDENTICON);
  * String url = gravatar.getUrl("iHaveAn@email.com");
  * byte[] jpg = gravatar.download("info@ralfebert.de");
  * </code>
@@ -67,7 +66,7 @@ public final class Gravatar {
     }
 
     /**
-     * Returns the Gravatar URL for the given email address.
+     * Returns the leo.tools.Gravatar URL for the given email address.
      */
     public String getUrl(String email) {
         Validate.notNull(email, "email");

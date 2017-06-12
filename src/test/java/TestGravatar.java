@@ -1,10 +1,11 @@
+import leo.tools.Gravatar;
+import leo.tools.GravatarDefaultImage;
 import org.apache.commons.io.FileUtils;
 import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
-import java.util.UUID;
 
 /**
  * Created by sh00514 on 2017/6/12.
